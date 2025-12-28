@@ -1,0 +1,107 @@
+.project-container .container-project {
+   //padding: 20px;
+    // background-color: #1d222b;
+    background-color: var(--background-color);
+}
+
+.project-container .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.project-container .project-dhg {
+    display: flex;
+    flex-wrap: wrap;  /* Cho phép các phần tử tự động xuống hàng khi không đủ không gian */
+    justify-content: flex-start; /* Sắp xếp các phần tử từ trái sang phải */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.project-container .project-dhg li {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Đảm bảo 3 phần tử trên một hàng với khoảng cách 20px giữa chúng */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+/* Ảnh logo dự án */
+.project-container .project-dhg img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.project-container .project-info {
+    text-align: center;
+}
+
+.project-container .project-customer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-container .project-store,
+.project-container .project-address,
+.project-container .project-detail {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 1024px) {
+    .project-container .project-dhg li {
+        width: calc(50% - 20px); /* Hiển thị 2 phần tử trên một hàng ở màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container .project-dhg li {
+        width: 100%; /* Hiển thị 1 phần tử trên một hàng ở màn hình nhỏ */
+    }
+}
+
+
+
+// .project-container .container-project {
+//     background-color: var(--background-color);
+// }
+
+// .project-container .project-dhg li {
+//     background-color: var(--card-background-color);
+//     color: var(--text-color);
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     border-radius: 8px;
+//     padding: 20px;
+//     width: calc(33.33% - 20px);
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     box-sizing: border-box;
+// }
+
+// .project-container .project-customer {
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+//     color: var(--text-color);
+// }
+
+// .project-container .project-store,
+// .project-container .project-address,
+// .project-container .project-detail {
+//     font-size: 1rem;
+//     color: var(--secondary-text-color);
+//     margin-bottom: 8px;
+// }

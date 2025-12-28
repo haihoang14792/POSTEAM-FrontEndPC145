@@ -1,0 +1,9 @@
+.store-header {
+    display: flex;
+    justify-content: flex-start; /* Căn chỉnh nội dung về phía bên trái */
+    margin-bottom: 20px; /* Khoảng cách dưới phần tiêu đề */
+}
+
+.store-header .btn {
+    margin-right: 10px; /* Khoảng cách giữa nút và các phần tử khác nếu cần */
+}

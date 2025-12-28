@@ -1,0 +1,65 @@
+.modalStore {
+    .store-header {
+      margin-bottom: 1rem;
+    }
+  
+    .modalContent {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  
+    .modalHeader {
+      border-bottom: none;
+    }
+  
+    .modalTitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .modalBody {
+      padding: 1rem 1.5rem;
+      background-color: #f0f8ff; // Light blue background
+    }
+  
+    .modalFooter {
+      border-top: none;
+      padding: 1rem 1.5rem;
+    }
+  
+    .formGroup {
+      margin-bottom: 1rem;
+    }
+  
+    .formLabel {
+      font-weight: 600;
+    }
+  
+    .formControl {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      color: #495057;
+      box-shadow: none;
+      transition: border-color 0.2s ease;
+      width: 100%;
+      max-width: 250px; // Adjust max width to limit input length
+    }
+  
+    .btnPrimary {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #fff;
+      font-weight: 600;
+      width: 25%;
+    }
+  
+    .btnSecondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: #fff;
+    }
+  }
+  
