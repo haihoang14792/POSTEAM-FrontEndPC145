@@ -1,107 +1,76 @@
-.project-container .container-project {
-   //padding: 20px;
-    // background-color: #1d222b;
-    background-color: var(--background-color);
+.recall-container {
+    padding: 24px;
+    background: #f5f7fa;
+    min-height: 100vh;
 }
 
-.project-container .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.project-container .project-dhg {
+.recall-header {
     display: flex;
-    flex-wrap: wrap;  /* Cho phép các phần tử tự động xuống hàng khi không đủ không gian */
-    justify-content: flex-start; /* Sắp xếp các phần tử từ trái sang phải */
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-}
-
-.project-container .project-dhg li {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    width: calc(33.33% - 20px); /* Đảm bảo 3 phần tử trên một hàng với khoảng cách 20px giữa chúng */
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    margin-bottom: 24px;
 }
 
-
-
-/* Ảnh logo dự án */
-.project-container .project-dhg img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.recall-section {
+    margin-bottom: 40px;
 }
 
-.project-container .project-info {
-    text-align: center;
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+
+    &.active {
+        color: #faad14;
+    }
+
+    &.done {
+        color: #52c41a;
+    }
 }
 
-.project-container .project-customer {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+.recall-card {
+    border-radius: 12px;
+    height: 100%;
+    transition: all 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active {
+        border-left: 5px solid #faad14;
+    }
+
+    &.done {
+        border-left: 5px solid #52c41a;
+        background: #f6ffed;
+        opacity: 0.9;
+    }
 }
 
-.project-container .project-store,
-.project-container .project-address,
-.project-container .project-detail {
-    font-size: 1rem;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recall-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
     color: #555;
-    margin-bottom: 8px;
-}
 
-
-@media (max-width: 1024px) {
-    .project-container .project-dhg li {
-        width: calc(50% - 20px); /* Hiển thị 2 phần tử trên một hàng ở màn hình nhỏ hơn */
+    svg {
+        color: #1677ff;
     }
 }
 
-@media (max-width: 768px) {
-    .project-container .project-dhg li {
-        width: 100%; /* Hiển thị 1 phần tử trên một hàng ở màn hình nhỏ */
-    }
+.recall-loading {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
-
-// .project-container .container-project {
-//     background-color: var(--background-color);
-// }
-
-// .project-container .project-dhg li {
-//     background-color: var(--card-background-color);
-//     color: var(--text-color);
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     border-radius: 8px;
-//     padding: 20px;
-//     width: calc(33.33% - 20px);
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     box-sizing: border-box;
-// }
-
-// .project-container .project-customer {
-//     font-size: 1.5rem;
-//     font-weight: bold;
-//     margin-bottom: 10px;
-//     color: var(--text-color);
-// }
-
-// .project-container .project-store,
-// .project-container .project-address,
-// .project-container .project-detail {
-//     font-size: 1rem;
-//     color: var(--secondary-text-color);
-//     margin-bottom: 8px;
-// }

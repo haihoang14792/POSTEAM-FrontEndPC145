@@ -46,6 +46,14 @@ const fetchDeviceAll = async () => {
   return response.data;
 };
 
+const fetchDeviceExcludeDHG = async () => {
+  const response = await strapiv1Instance.get(
+    "/api/device-services?pagination[limit]=9000&filters[Store][$ne]=DHG"
+  );
+  return response.data;
+};
+
+
 // const fetchDeviceAll = async () => {
 //     try {
 //         const response = await strapiv1Instance.get('/api/device-services');
@@ -820,4 +828,5 @@ export {
   fetchTicket,
   deleteTicketById,
   fetchDeviceDetailHandoverPOS,
+  fetchDeviceExcludeDHG,
 };

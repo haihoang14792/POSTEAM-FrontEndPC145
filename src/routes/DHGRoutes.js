@@ -23,6 +23,7 @@ import UserManagement from "../components/DHG/CompanyStaff/UserManagement";
 import TeamCalendar from "../components/DHG/POS/TeamCalendar";
 import ImportList from "../components/DHG/Warehouse/ImportList";
 import UserPermissions from "../components/DHG/CompanyStaff/UserPermissions";
+import FileManager from "../components/FileManager/FileManager";
 
 const DHGRoutes = [
   {
@@ -36,7 +37,7 @@ const DHGRoutes = [
     element: <PrivateRoutes element={<Dashboard />} />,
   },
   {
-    path: "/project",
+    path: "/cv/projectplant",
     name: "Project",
     element: <PrivateRoutes element={<Project />} />,
   },
@@ -102,6 +103,7 @@ const DHGRoutes = [
     element: <PrivateRoutes element={<TeamCalendar />} />,
   },
   { path: "/kho/pnkho", element: <PrivateRoutes element={<ImportList />} /> },
+  { path: "/pos/files", element: <PrivateRoutes element={<FileManager />} /> },
 ];
 
 export default DHGRoutes;

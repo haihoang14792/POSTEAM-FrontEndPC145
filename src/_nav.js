@@ -45,7 +45,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: "Dự Án",
+    name: "Công việc",
     icon: (
       <CIcon
         icon={cilFolder}
@@ -56,23 +56,11 @@ const _nav = [
     items: [
       {
         component: CNavItem,
-        name: "Danh sách dự án",
-        to: "/dhg/project",
+        name: "Dự án và kế hoạch",
+        to: "/dhg/cv/projectplant",
         icon: (
           <CIcon
             icon={cilList}
-            customClassName="nav-icon"
-            style={{ color: "#FF8C00" }}
-          />
-        ),
-      },
-      {
-        component: CNavItem,
-        name: "Thêm dự án",
-        to: "/dhg/project/add",
-        icon: (
-          <CIcon
-            icon={cilPlus}
             customClassName="nav-icon"
             style={{ color: "#FF8C00" }}
           />
@@ -335,7 +323,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: "Công việc POS",
+    name: "POS",
     icon: (
       <CIcon
         icon={cilCalendar}
@@ -344,6 +332,18 @@ const _nav = [
       />
     ),
     items: [
+      {
+        component: CNavItem,
+        name: "Thư mục lưu trữ",
+        to: "/dhg/pos/files",
+        icon: (
+          <CIcon
+            icon={cilFolder}
+            customClassName="nav-icon"
+            style={{ color: "#FF8C00" }}
+          />
+        ),
+      },
       {
         component: CNavItem,
         name: "Lịch làm việc",
@@ -365,18 +365,6 @@ const _nav = [
             icon={cilCalendar}
             customClassName="nav-icon"
             style={{ color: "#FF6347" }}
-          />
-        ),
-      },
-      {
-        component: CNavItem,
-        name: "Điểm đánh giá",
-        to: "/dhg/cvpos/diemdg",
-        icon: (
-          <CIcon
-            icon={cilStar}
-            customClassName="nav-icon"
-            style={{ color: "#FFD700" }}
           />
         ),
       },

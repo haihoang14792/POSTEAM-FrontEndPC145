@@ -37,10 +37,23 @@ const fetchHeaderHomepage = async () => {
 };
 const fetchProjectDHGs = async () => {
     try {
-        const response = await strapi.get('/api/project-of-dhgs?populate=Logo');
+        const response = await strapi.get('/api/project-of-dhgs?populate=Logo&filters[Detail][$eq]=Dự án');
         return response; // Trả dữ liệu về cho các hàm gọi
     } catch (error) {
         throw new Error('Error fetching project customers');
+    }
+};
+
+const createProjectDHG = async (projectData) => {
+    try {
+        // Gọi API POST tới endpoint content-type project-of-dhgs
+        const response = await strapi.post('/api/project-of-dhgs', {
+            data: projectData,
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error creating project:', error);
+        throw error;
     }
 };
 
@@ -54,28 +67,6 @@ const fetchProjectDHG = async () => {
     }
 };
 
-
-const fetchStore = async (storeId) => {
-    try {
-        const response = await strapi.get(`/api/stores?filters[StoreID][$eq]=${storeId}`);
-        console.log('API Response:', response.data); // In ra dữ liệu trả về từ API để kiểm tra
-        return response.data; // Trả về dữ liệu JSON từ API
-    } catch (error) {
-        console.error('Error fetching store details:', error);
-        throw error;
-    }
-};
-
-const updateJobStatus = async (jobId, data) => {
-    try {
-        const response = await strapi.put(`/api/stores/${jobId}`, {
-            data,
-        });
-        return response.data.data;
-    } catch (error) {
-        throw error;
-    }
-};
 
 const createNewJob = async (jobData) => {
     try {
@@ -143,14 +134,16 @@ const fetchListCustomers = async () => {
     }
 };
 
+
+
+
+
 export {
     fetchProjectCustomers,
     fetchBanners,
     fetchFamilyMart,
     fetchHeaderHomepage,
     fetchProjectDHGs,
-    updateJobStatus,
-    fetchStore,
     createNewJob,
     deleteJobs,
     fetchDevice,
@@ -158,4 +151,5 @@ export {
     fetchProjectDHG,
     fetchListCustomer,
     fetchListCustomers,
+    createProjectDHG,
 };

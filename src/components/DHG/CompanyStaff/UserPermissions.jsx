@@ -259,6 +259,7 @@ const systemPermissions = {
   Receivelist: "Người nhận phiếu",
   ReadWarehouse: "Truy cập kho",
   Receivelistkho: "Người nhận phiếu",
+  Projecter: "Người quản lý dự án"
 };
 
 // 🟢 Gom quyền theo nhóm hiển thị
@@ -267,7 +268,7 @@ const permissionGroups = {
   "Nhập hàng": ["Purchase", "Purchaseer", "Exportlister"],
   "Hóa đơn": ["Invoice", "Invoiceer"],
   "Thiết bị": ["Devicelist", "Receivelist"],
-  "Trang POS": ["ReadPOS", "WritePOS"],
+  "Trang POS": ["ReadPOS", "WritePOS", "Projecter"],
   "Tổ chức": ["Leader"],
 };
 
@@ -320,6 +321,7 @@ const UserPermissions = () => {
       Receivelist: user.Receivelist ?? false,
       ReadWarehouse: user.ReadWarehouse ?? false,
       Receivelistkho: user.Receivelistkho ?? false,
+      Projecter: user.Projecter ?? false,
     });
     setIsModalOpen(true);
   };

@@ -184,8 +184,8 @@ const DeviceList = () => {
     return isNaN(date.getTime())
       ? ""
       : `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1)
-        .toString()
-        .padStart(2, "0")}/${date.getFullYear()}`;
+          .toString()
+          .padStart(2, "0")}/${date.getFullYear()}`;
   };
 
   const columns = [
@@ -231,8 +231,8 @@ const DeviceList = () => {
           status === "Không sử dụng"
             ? "yellow"
             : status === "Không có thiết bị"
-              ? "red"
-              : "green";
+            ? "red"
+            : "green";
         return <Tag color={color}>{status}</Tag>;
       },
     },
@@ -353,9 +353,9 @@ const DeviceList = () => {
           onChange: (page, pageSize) =>
             setPagination({ current: page, pageSize }),
         }}
-      // onRow={(record) => ({
-      //   onClick: () => setDetailModal({ visible: true, record }),
-      // })}
+        // onRow={(record) => ({
+        //   onClick: () => setDetailModal({ visible: true, record }),
+        // })}
       />
       <Modal
         title="Chi tiết thiết bị"
@@ -388,8 +388,8 @@ const DeviceList = () => {
                     ? "yellow"
                     : detailModal.record.attributes.Status ===
                       "Không có thiết bị"
-                      ? "red"
-                      : "green"
+                    ? "red"
+                    : "green"
                 }
               >
                 {detailModal.record.attributes.Status}
